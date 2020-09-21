@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Background</title>
+    <style>
+* {
+  margin: 0;
+}
+body {
+  font-family: arial;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;    
+}
+
+.texto {
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+ 
+button {
+  font-size: large;
+  margin: 10px;
+  padding: 10px 19px;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="texto">
+<button onclick="cambiarColor()">Click</button>
+<h3>Click para cambiar aleatoriamente el color al background.</h3>  
+</div>
+
+<script>
+function cambiarColor(){
+
+/*
+Escribir una funcion que cambie aleatoriamente el color del background de la pagina.  
+*/
+
+red = Math.floor(Math.random() * 256);
+green = Math.floor(Math.random() * 256);
+blue = Math.floor(Math.random() * 256);
+document.querySelector('body').style.backgroundColor = `rgb(${red},${green},${blue}`;
+console.log(red, green, blue); 
+ 
+}
+</script>
+</body>
+</html>
